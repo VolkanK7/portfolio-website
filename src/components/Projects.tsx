@@ -1,45 +1,47 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useState } from 'react';
+import pickupp from '../../public/pickupp.png';
+import ottobus from '../../public/ottobus.png';
+import softalya from '../../public/softalya.jpeg';
 
 const projects = [
    {
       id: 1,
-      title: 'Tourism Web Application',
-      description:
-         'Developed scalable and user-friendly web applications for the tourism industry. Worked in an Agile environment, applying Scrum methodologies to improve workflows and collaboration.',
-      image: '/project-placeholder.jpg',
-      tags: ['React', 'TypeScript', 'Redux', 'Tailwind CSS'],
-      position: 'Frontend Developer (Full-time)',
-      company: 'Softalya Software Inc.',
-      date: 'May 2022 - Present',
-      liveUrl: '#',
-      githubUrl: '#',
-   },
-   {
-      id: 2,
-      title: 'Transportation Industry Platform',
+      title: 'Ottobus (Transportation Industry Platform)',
       description:
          'Built responsive and scalable UI components for a transportation industry application. Focused on creating a seamless user experience with modern React patterns.',
-      image: '/project-placeholder.jpg',
+      image: ottobus,
       tags: ['React', 'GraphQL', 'Apollo', 'Scrum'],
       position: 'Frontend Developer (Full-time)',
       company: 'Softalya Software Inc.',
       date: 'May 2022 - Present',
-      liveUrl: '#',
+      liveUrl: 'https://www.ottobus.net/en',
+      githubUrl: '#',
+   },
+   {
+      id: 2,
+      title: 'Pickupp (Tourism Management System)',
+      description:
+         'Developed scalable and user-friendly web application for the tourism industry. Worked in an Agile environment, applying Scrum methodologies to improve workflows and collaboration.',
+      image: pickupp,
+      tags: ['React', 'TypeScript', 'Redux', 'Tailwind CSS'],
+      position: 'Frontend Developer (Full-time)',
+      company: 'Softalya Software Inc.',
+      date: 'May 2022 - Present',
+      liveUrl: 'https://pickupp.site/',
       githubUrl: '#',
    },
    {
       id: 3,
-      title: 'Tourism Management System',
+      title: 'Pickupp (Tourism Management System)',
       description:
          'Contributed to a project developing solutions for the tourism industry as a Frontend Developer Intern. Focused on building responsive and scalable UIs.',
-      image: '/project-placeholder.jpg',
+      image: pickupp,
       tags: ['Vue.js', 'JavaScript', 'Bootstrap', 'Sass'],
       position: 'Frontend Developer (Internship)',
       company: 'Softalya Software Inc.',
       date: 'Feb 2022 - May 2022',
-      liveUrl: '#',
+      liveUrl: 'https://pickupp.site/',
       githubUrl: '#',
    },
 ];
@@ -54,7 +56,7 @@ const Projects = () => {
    const filteredProjects = activeFilter === 'All' ? projects : projects.filter((project) => project.tags.includes(activeFilter));
 
    return (
-      <section id="projects" className="py-20 px-6 md:px-12 bg-dark">
+      <section id="projects" className="py-20 px-6 md:px-12 bg-[#0F172A]">
          <div className="container mx-auto">
             <motion.div
                className="text-center mb-16"
@@ -63,15 +65,15 @@ const Projects = () => {
                viewport={{ once: true }}
                transition={{ duration: 0.5 }}
             >
-               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-primary">Work Experience</h2>
-               <p className="text-light/60 max-w-3xl mx-auto mb-8">Discover my professional experience developing web applications</p>
+               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-[#3B82F6]">Work Experience</h2>
+               <p className="text-[#E2E8F0]/60 max-w-3xl mx-auto mb-8">Discover my professional experience developing web applications</p>
 
                <div className="flex flex-wrap justify-center gap-3 mb-10">
                   {allTags.map((tag) => (
                      <motion.button
                         key={tag}
                         className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 
-                     ${activeFilter === tag ? 'bg-primary text-white' : 'bg-darker text-light/70 hover:bg-primary/10'}`}
+                     ${activeFilter === tag ? 'bg-[#3B82F6] text-white' : 'bg-[#030712] text-[#E2E8F0]/70 hover:bg-[#3B82F6]/10'}`}
                         onClick={() => setActiveFilter(tag)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -92,7 +94,7 @@ const Projects = () => {
                {filteredProjects.map((project, index) => (
                   <motion.div
                      key={project.id}
-                     className="bg-darker rounded-xl overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-300"
+                     className="bg-[#030712] rounded-xl overflow-hidden border border-[#3B82F6]/10 hover:border-[#3B82F6]/30 transition-all duration-300"
                      initial={{ opacity: 0, y: 50 }}
                      whileInView={{ opacity: 1, y: 0 }}
                      viewport={{ once: true }}
@@ -100,13 +102,15 @@ const Projects = () => {
                      whileHover={{ y: -10, boxShadow: '0 10px 20px -15px rgba(139, 92, 246, 0.5)' }}
                   >
                      <div className="relative h-48 bg-gray-800">
-                        <div className="absolute inset-0 flex items-center justify-center bg-darker">
+                        <div className="absolute inset-0 flex items-center justify-center bg-[#030712]">
                            <div className="flex items-center space-x-4">
-                              <span className="text-primary text-opacity-20 text-6xl font-bold">{project.title.slice(0, 1)}</span>
-                              <div className="h-20 w-1 bg-primary/10 rounded-full"></div>
+                              <span className="text-[#3B82F6] text-opacity-20 text-6xl font-bold">
+                                 <img src={project.image.src} alt="" height={120} width={120} className="rounded-xl" />
+                              </span>
+                              <div className="h-20 w-1 bg-[#3B82F6]/10 rounded-full"></div>
                               <div className="flex flex-col items-start">
-                                 <span className="text-primary font-medium">{project.company}</span>
-                                 <span className="text-light/40 text-sm">{project.date}</span>
+                                 <span className="text-[#3B82F6] font-medium">{project.company}</span>
+                                 <span className="text-[#E2E8F0]/40 text-sm">{project.date}</span>
                               </div>
                            </div>
                         </div>
@@ -115,22 +119,22 @@ const Projects = () => {
                      <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
                            {project.tags.map((tag) => (
-                              <span key={tag} className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary">
+                              <span key={tag} className="text-xs px-2 py-1 rounded-full bg-[#3B82F6]/10 text-[#3B82F6]">
                                  {tag}
                               </span>
                            ))}
                         </div>
 
-                        <h3 className="text-xl font-bold mb-1 text-lighter">{project.title}</h3>
-                        <p className="text-primary/80 mb-3 text-sm font-medium">{project.position}</p>
-                        <p className="text-light/70 text-sm mb-4">{project.description}</p>
+                        <h3 className="text-xl font-bold mb-1 text-[#F8FAFC]">{project.title}</h3>
+                        <p className="text-[#3B82F6]/80 mb-3 text-sm font-medium">{project.position}</p>
+                        <p className="text-[#E2E8F0]/70 text-sm mb-4">{project.description}</p>
 
                         <div className="flex gap-3">
                            <a
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-secondary transition-colors"
+                              className="inline-flex items-center gap-1 text-sm font-medium text-[#3B82F6] hover:text-[#10B981] transition-colors"
                            >
                               <span>View Project</span>
                               <svg
@@ -149,17 +153,17 @@ const Projects = () => {
                               </svg>
                            </a>
 
-                           <a
+                           {/* <a
                               href={project.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-sm font-medium text-light/70 hover:text-light transition-colors"
+                              className="inline-flex items-center gap-1 text-sm font-medium text-[#E2E8F0]/70 hover:text-[#E2E8F0] transition-colors"
                            >
                               <span>Code</span>
                               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                               </svg>
-                           </a>
+                           </a> */}
                         </div>
                      </div>
                   </motion.div>
@@ -173,10 +177,10 @@ const Projects = () => {
                viewport={{ once: true }}
                transition={{ duration: 0.5 }}
             >
-               <p className="text-light/60 mb-8">Looking forward to working on new exciting projects in the frontend development space</p>
+               <p className="text-[#E2E8F0]/60 mb-8">Looking forward to working on new exciting projects in the frontend development space</p>
                <motion.a
                   href="#contact"
-                  className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary px-6 py-3 rounded-full transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-[#3B82F6]/10 hover:bg-[#3B82F6]/20 text-[#3B82F6] px-6 py-3 rounded-full transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                >

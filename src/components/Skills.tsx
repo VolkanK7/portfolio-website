@@ -61,7 +61,7 @@ const Skills = () => {
    };
 
    return (
-      <section id="skills" className="py-20 px-6 md:px-12 bg-darker relative overflow-hidden">
+      <section id="skills" className="py-20 px-6 md:px-12 bg-[#030712] relative overflow-hidden">
          {/* Animated code background */}
          <motion.div
             className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden"
@@ -69,7 +69,7 @@ const Skills = () => {
             animate={{ opacity: 0.05 }}
             transition={{ duration: 1 }}
          >
-            <pre className="text-xs md:text-sm text-primary font-mono leading-relaxed">
+            <pre className="text-xs md:text-sm text-[#3B82F6] font-mono leading-relaxed">
                {`import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -128,8 +128,8 @@ export default App;`}
                viewport={{ once: true }}
                transition={{ duration: 0.5 }}
             >
-               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-primary">Technical Skills</h2>
-               <p className="text-light/60 max-w-3xl mx-auto">
+               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-[#3B82F6]">Technical Skills</h2>
+               <p className="text-[#E2E8F0]/60 max-w-3xl mx-auto">
                   Proficient in developing dynamic web applications using TypeScript, React, Vue, GraphQL, and REST technologies.
                </p>
             </motion.div>
@@ -140,7 +140,7 @@ export default App;`}
                   <motion.button
                      key={category.title}
                      className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-colors duration-300 ${
-                        activeCategory === category.title ? 'bg-primary text-white' : 'bg-dark text-light/70 hover:bg-primary/10'
+                        activeCategory === category.title ? 'bg-[#3B82F6] text-white' : 'bg-[#0F172A] text-[#E2E8F0]/70 hover:bg-[#3B82F6]/10'
                      }`}
                      onClick={() => setActiveCategory(category.title)}
                      whileHover={{ scale: 1.05 }}
@@ -162,15 +162,15 @@ export default App;`}
                                  <motion.div
                                     key={skill.name}
                                     variants={item}
-                                    className="bg-dark p-6 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300"
+                                    className="bg-[#0F172A] p-6 rounded-xl border border-[#3B82F6]/10 hover:border-[#3B82F6]/30 transition-all duration-300"
                                  >
                                     <div className="flex justify-between items-center mb-3">
-                                       <span className="text-light/90 font-medium">{skill.name}</span>
-                                       <span className="text-primary font-medium">{skill.level}%</span>
+                                       <span className="text-[#E2E8F0]/90 font-medium">{skill.name}</span>
+                                       <span className="text-[#3B82F6] font-medium">{skill.level}%</span>
                                     </div>
-                                    <div className="h-2 w-full bg-darker rounded-full overflow-hidden">
+                                    <div className="h-2 w-full bg-[#030712] rounded-full overflow-hidden">
                                        <motion.div
-                                          className="h-full bg-gradient-to-r from-primary to-secondary"
+                                          className="h-full bg-gradient-to-r from-[#3B82F6] to-[#10B981]"
                                           style={{ width: 0 }}
                                           animate={{ width: `${skill.level}%` }}
                                           transition={{ duration: 1, delay: 0.3 }}
@@ -185,13 +185,13 @@ export default App;`}
             </div>
 
             <motion.div
-               className="mt-16 p-6 bg-dark rounded-xl border border-primary/10 relative overflow-hidden"
+               className="mt-16 p-6 bg-[#0F172A] rounded-xl border border-[#3B82F6]/10 relative overflow-hidden"
                initial={{ opacity: 0, y: 30 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 0.5, delay: 0.2 }}
             >
-               <h3 className="text-xl font-bold text-lighter mb-6">Other Professional Skills</h3>
+               <h3 className="text-xl font-bold text-[#F8FAFC] mb-6">Other Professional Skills</h3>
                <div className="flex flex-wrap gap-3">
                   {[
                      'Solution-oriented approach to problems',
@@ -205,7 +205,7 @@ export default App;`}
                   ].map((skill, index) => (
                      <motion.span
                         key={index}
-                        className="bg-darker px-3 py-1 rounded-full text-sm text-light/80 border border-primary/10 hover:border-primary/30 transition-all duration-300"
+                        className="bg-[#030712] px-3 py-1 rounded-full text-sm text-[#E2E8F0]/80 border border-[#3B82F6]/10 hover:border-[#3B82F6]/30 transition-all duration-300"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}

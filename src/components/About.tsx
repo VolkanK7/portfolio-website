@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
    return (
-      <section id="about" className="py-20 px-6 md:px-12 bg-dark">
+      <section id="about" className="py-20 px-6 md:px-12 bg-[#0F172A]">
          <div className="container mx-auto">
             <motion.div
                className="text-center mb-16"
@@ -11,8 +11,8 @@ const About = () => {
                viewport={{ once: true }}
                transition={{ duration: 0.5 }}
             >
-               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-primary">About Me</h2>
-               <p className="text-light/60 max-w-3xl mx-auto">Learn more about my professional background and experience.</p>
+               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-[#3B82F6]">About Me</h2>
+               <p className="text-[#E2E8F0]/60 max-w-3xl mx-auto">Learn more about my professional background and experience.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -23,29 +23,29 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                >
-                  <p className="text-light/80 leading-relaxed">
-                     I am a dedicated <span className="text-primary font-medium">Frontend Developer</span> with a strong background in web development,
+                  <p className="text-[#E2E8F0]/80 leading-relaxed">
+                     I am a dedicated <span className="text-[#3B82F6] font-medium">Frontend Developer</span> with a strong background in web development,
                      specializing in TypeScript, React, and REST technologies. My journey started with database programming in high school and continued through
                      my Computer Engineering degree.
                   </p>
 
-                  <p className="text-light/80 leading-relaxed">
+                  <p className="text-[#E2E8F0]/80 leading-relaxed">
                      Throughout my career, I have worked on projects mainly in the tourism and transportation industries, building high-performance and
                      user-friendly web applications. I work especially on React and RESTful APIs. I actively implement Agile methodologies, ensuring effective
                      collaboration and structured workflows.
                   </p>
 
-                  <p className="text-light/80 leading-relaxed">
+                  <p className="text-[#E2E8F0]/80 leading-relaxed">
                      I believe in creating dynamic web applications that are not only visually appealing but also perform efficiently. My focus is on delivering
                      responsive and accessible interfaces that provide excellent user experiences.
                   </p>
 
                   <div className="pt-4">
                      <motion.a
-                        href="/cv.pdf"
+                        href="/CV_VolkanKaya.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors duration-300"
+                        className="inline-flex items-center gap-2 text-[#3B82F6] hover:text-[#10B981] transition-colors duration-300"
                         whileHover={{ x: 5 }}
                      >
                         <span>Download CV</span>
@@ -75,27 +75,27 @@ const About = () => {
                   ].map((stat, index) => (
                      <motion.div
                         key={stat.label}
-                        className="bg-darker p-6 rounded-xl border border-primary/20 flex flex-col items-center justify-center text-center group"
+                        className="bg-[#030712] p-6 rounded-xl border border-[#3B82F6]/20 flex flex-col items-center justify-center text-center group"
                         whileHover={{ y: -5, borderColor: 'rgba(139, 92, 246, 0.5)' }}
                         transition={{ duration: 0.2 }}
                      >
-                        <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors duration-300">
+                        <h3 className="text-xl md:text-2xl font-bold text-[#3B82F6] mb-2 group-hover:text-[#10B981] transition-colors duration-300">
                            {stat.value}
                         </h3>
-                        <p className="text-light/70">{stat.label}</p>
+                        <p className="text-[#E2E8F0]/70">{stat.label}</p>
                      </motion.div>
                   ))}
                </motion.div>
             </div>
 
             <motion.div
-               className="mt-16 pt-12 border-t border-primary/10"
+               className="mt-16 pt-12 border-t border-[#3B82F6]/10"
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
                transition={{ duration: 0.5, delay: 0.3 }}
             >
-               <h3 className="text-2xl font-bold text-lighter mb-8">Education</h3>
+               <h3 className="text-2xl font-bold text-[#F8FAFC] mb-8">Education</h3>
                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {[
                      {
@@ -119,7 +119,7 @@ const About = () => {
                   ].map((edu, index) => (
                      <motion.div
                         key={index}
-                        className="bg-darker p-6 rounded-xl border border-primary/10 relative overflow-hidden group"
+                        className="bg-[#030712] p-6 rounded-xl border border-[#3B82F6]/10 relative overflow-hidden group"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -127,13 +127,13 @@ const About = () => {
                         whileHover={{ borderColor: 'rgba(139, 92, 246, 0.3)' }}
                      >
                         <motion.div
-                           className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-bl-full opacity-0 group-hover:opacity-100"
+                           className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#3B82F6]/20 to-[#10B981]/20 rounded-bl-full opacity-0 group-hover:opacity-100"
                            transition={{ duration: 0.3 }}
                         />
-                        <h4 className="text-xl font-bold text-lighter mb-1">{edu.degree}</h4>
-                        <p className="text-primary mb-2">{edu.school}</p>
-                        <p className="text-light/70 text-sm">{edu.years}</p>
-                        <p className="text-light/70 text-sm">GPA: {edu.gpa}</p>
+                        <h4 className="text-xl font-bold text-[#F8FAFC] mb-1">{edu.degree}</h4>
+                        <p className="text-[#3B82F6] mb-2">{edu.school}</p>
+                        <p className="text-[#E2E8F0]/70 text-sm">{edu.years}</p>
+                        <p className="text-[#E2E8F0]/70 text-sm">GPA: {edu.gpa}</p>
                      </motion.div>
                   ))}
                </div>

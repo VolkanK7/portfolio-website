@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import profile from '../../public/profile.jpeg';
 
 const Hero = () => {
    return (
@@ -13,7 +13,7 @@ const Hero = () => {
                   transition={{ duration: 0.6 }}
                >
                   <motion.span
-                     className="inline-block text-primary text-lg font-mono mb-2"
+                     className="inline-block text-[#3B82F6] text-lg font-mono mb-2"
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}
                      transition={{ delay: 0.2 }}
@@ -27,15 +27,20 @@ const Hero = () => {
                      animate={{ opacity: 1 }}
                      transition={{ delay: 0.3 }}
                   >
-                     <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Volkan Kaya</span>
+                     <span className="bg-gradient-to-r from-[#3B82F6] to-[#10B981] bg-clip-text text-transparent">Volkan Kaya</span>
                   </motion.h1>
 
-                  <motion.h2 className="text-xl sm:text-2xl text-light/90 mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-                     <span className="text-primary">Frontend</span> Developer
+                  <motion.h2
+                     className="text-xl sm:text-2xl text-[#E2E8F0]/90 mb-6"
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     transition={{ delay: 0.4 }}
+                  >
+                     <span className="text-[#3B82F6]">Frontend</span> Developer
                   </motion.h2>
 
                   <motion.p
-                     className="text-light/70 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed"
+                     className="text-[#E2E8F0]/70 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed"
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}
                      transition={{ delay: 0.5 }}
@@ -52,7 +57,7 @@ const Hero = () => {
                   >
                      <motion.a
                         href="#projects"
-                        className="bg-gradient-to-r from-primary to-secondary text-white py-3 px-8 rounded-full font-medium hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+                        className="bg-gradient-to-r from-[#3B82F6] to-[#10B981] text-white py-3 px-8 rounded-full font-medium hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                      >
@@ -61,7 +66,7 @@ const Hero = () => {
 
                      <motion.a
                         href="#contact"
-                        className="bg-transparent border border-primary/30 text-primary py-3 px-8 rounded-full font-medium hover:bg-primary/10 transition-all duration-300"
+                        className="bg-transparent border border-[#3B82F6]/30 text-[#3B82F6] py-3 px-8 rounded-full font-medium hover:bg-[#3B82F6]/10 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                      >
@@ -76,11 +81,13 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7 }}
                >
-                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
+                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#10B981] p-1">
                      <div className="absolute inset-1 rounded-full overflow-hidden">
-                        <div className="w-full h-full bg-dark flex items-center justify-center text-light">
+                        <div className="w-full h-full bg-[#0F172A] flex items-center justify-center text-[#E2E8F0]">
                            <div className="relative w-full h-full flex items-center justify-center">
-                              <span className="text-6xl">VK</span>
+                              <span className="text-6xl">
+                                 <img src={profile.src} alt="profile" />
+                              </span>
                               <motion.div
                                  className="absolute inset-0 border-4 border-transparent rounded-full"
                                  animate={{

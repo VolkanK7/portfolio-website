@@ -4,15 +4,6 @@ module.exports = {
    darkMode: 'class',
    theme: {
       extend: {
-         colors: {
-            primary: '#3B82F6', // Blue
-            secondary: '#10B981', // Green
-            accent: '#8B5CF6', // Purple
-            dark: '#0F172A', // Dark blue
-            darker: '#030712', // Almost black
-            light: '#E2E8F0', // Light gray
-            lighter: '#F8FAFC', // Almost white
-         },
          fontFamily: {
             sans: ['var(--font-geist-sans)'],
             mono: ['var(--font-geist-mono)'],

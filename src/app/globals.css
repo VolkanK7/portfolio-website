@@ -31,7 +31,7 @@ body {
   }
   
   body {
-    @apply bg-gray-900 text-gray-100;
+    @apply bg-[#030712] text-[#E2E8F0];
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -44,14 +44,14 @@ body {
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-800;
+    @apply bg-[#0F172A];
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-blue-500/60 rounded-full;
+    @apply bg-[#3B82F6]/60 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-blue-500;
+    @apply bg-[#3B82F6];
   }
 }

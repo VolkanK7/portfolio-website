@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
    return (
-      <section id="contact" className="py-20 px-6 md:px-12 bg-darker">
+      <section id="contact" className="py-20 px-6 md:px-12 bg-[#030712]">
          <div className="container mx-auto">
             <motion.div
                className="text-center mb-16"
@@ -11,76 +11,76 @@ const Contact = () => {
                viewport={{ once: true }}
                transition={{ duration: 0.5 }}
             >
-               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-primary">Contact Me</h2>
-               <p className="text-light/60 max-w-3xl mx-auto">
+               <h2 className="text-3xl md:text-4xl font-bold inline-block pb-2 mb-4 border-b-2 border-[#3B82F6]">Contact Me</h2>
+               <p className="text-[#E2E8F0]/60 max-w-3xl mx-auto">
                   Want to discuss a project or just say hello? Feel free to reach out to me through the contact form or via my social media.
                </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                <motion.div
-                  className="bg-dark p-6 md:p-8 rounded-xl border border-primary/10"
+                  className="bg-[#0F172A] p-6 md:p-8 rounded-xl border border-[#3B82F6]/10"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                >
-                  <h3 className="text-xl font-bold text-primary mb-6">Contact Form</h3>
+                  <h3 className="text-xl font-bold text-[#3B82F6] mb-6">Contact Form</h3>
 
                   <form className="space-y-5">
                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                           <label htmlFor="name" className="block text-sm font-medium text-light/80 mb-1">
+                           <label htmlFor="name" className="block text-sm font-medium text-[#E2E8F0]/80 mb-1">
                               Name
                            </label>
                            <input
                               type="text"
                               id="name"
-                              className="w-full px-4 py-3 bg-darker border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent text-light"
+                              className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0]"
                               placeholder="Your name"
                            />
                         </div>
 
                         <div>
-                           <label htmlFor="email" className="block text-sm font-medium text-light/80 mb-1">
+                           <label htmlFor="email" className="block text-sm font-medium text-[#E2E8F0]/80 mb-1">
                               Email
                            </label>
                            <input
                               type="email"
                               id="email"
-                              className="w-full px-4 py-3 bg-darker border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent text-light"
+                              className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0]"
                               placeholder="Your email address"
                            />
                         </div>
                      </div>
 
                      <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-light/80 mb-1">
+                        <label htmlFor="subject" className="block text-sm font-medium text-[#E2E8F0]/80 mb-1">
                            Subject
                         </label>
                         <input
                            type="text"
                            id="subject"
-                           className="w-full px-4 py-3 bg-darker border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent text-light"
+                           className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0]"
                            placeholder="Subject of your message"
                         />
                      </div>
 
                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-light/80 mb-1">
+                        <label htmlFor="message" className="block text-sm font-medium text-[#E2E8F0]/80 mb-1">
                            Message
                         </label>
                         <textarea
                            id="message"
                            rows={5}
-                           className="w-full px-4 py-3 bg-darker border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent text-light resize-none"
+                           className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0] resize-none"
                            placeholder="Your message..."
                         ></textarea>
                      </div>
 
                      <motion.button
                         type="submit"
-                        className="w-full py-3 px-6 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-medium transition-all duration-300"
+                        className="w-full py-3 px-6 bg-gradient-to-r from-[#3B82F6] to-[#10B981] text-white rounded-lg font-medium transition-all duration-300"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                      >
@@ -97,14 +97,14 @@ const Contact = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                >
                   <div>
-                     <h3 className="text-xl font-bold text-primary mb-4">Contact Information</h3>
-                     <p className="text-light/70 mb-6">
+                     <h3 className="text-xl font-bold text-[#3B82F6] mb-4">Contact Information</h3>
+                     <p className="text-[#E2E8F0]/70 mb-6">
                         You can reach me directly through the channels below. I typically respond to messages within 24 hours.
                      </p>
 
                      <div className="space-y-4">
                         <div className="flex items-start gap-4">
-                           <div className="text-primary p-3 bg-dark rounded-full">
+                           <div className="text-[#3B82F6] p-3 bg-[#0F172A] rounded-full">
                               <svg
                                  xmlns="http://www.w3.org/2000/svg"
                                  fill="none"
@@ -121,15 +121,15 @@ const Contact = () => {
                               </svg>
                            </div>
                            <div>
-                              <h4 className="text-sm font-medium text-light/90">Email</h4>
-                              <a href="mailto:volkan.kaya007@gmail.com" className="text-primary hover:underline">
+                              <h4 className="text-sm font-medium text-[#E2E8F0]/90">Email</h4>
+                              <a href="mailto:volkan.kaya007@gmail.com" className="text-[#3B82F6] hover:underline">
                                  volkan.kaya007@gmail.com
                               </a>
                            </div>
                         </div>
 
                         <div className="flex items-start gap-4">
-                           <div className="text-primary p-3 bg-dark rounded-full">
+                           <div className="text-[#3B82F6] p-3 bg-[#0F172A] rounded-full">
                               <svg
                                  xmlns="http://www.w3.org/2000/svg"
                                  fill="none"
@@ -147,13 +147,13 @@ const Contact = () => {
                               </svg>
                            </div>
                            <div>
-                              <h4 className="text-sm font-medium text-light/90">Location</h4>
-                              <p className="text-light/70">Antalya, Turkey</p>
+                              <h4 className="text-sm font-medium text-[#E2E8F0]/90">Location</h4>
+                              <p className="text-[#E2E8F0]/70">Antalya, Turkey</p>
                            </div>
                         </div>
 
                         <div className="flex items-start gap-4">
-                           <div className="text-primary p-3 bg-dark rounded-full">
+                           <div className="text-[#3B82F6] p-3 bg-[#0F172A] rounded-full">
                               <svg
                                  xmlns="http://www.w3.org/2000/svg"
                                  fill="none"
@@ -170,8 +170,8 @@ const Contact = () => {
                               </svg>
                            </div>
                            <div>
-                              <h4 className="text-sm font-medium text-light/90">Phone</h4>
-                              <a href="tel:+905534134" className="text-primary hover:underline">
+                              <h4 className="text-sm font-medium text-[#E2E8F0]/90">Phone</h4>
+                              <a href="tel:+905534134" className="text-[#3B82F6] hover:underline">
                                  +90 (553) 413 473
                               </a>
                            </div>
@@ -180,7 +180,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                     <h3 className="text-xl font-bold text-primary mb-4">Social Media</h3>
+                     <h3 className="text-xl font-bold text-[#3B82F6] mb-4">Social Media</h3>
                      <div className="flex gap-4">
                         {[
                            {
@@ -199,7 +199,7 @@ const Contact = () => {
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                  </svg>
                               ),
-                              url: 'https://linkedin.com/in/volkank7',
+                              url: 'https://linkedin.com/in/volkann7',
                            },
                         ].map((social, index) => (
                            <motion.a
@@ -207,7 +207,7 @@ const Contact = () => {
                               href={social.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-3 bg-dark text-light/70 hover:text-primary rounded-full transition-colors duration-300"
+                              className="p-3 bg-[#0F172A] text-[#E2E8F0]/70 hover:text-[#3B82F6] rounded-full transition-colors duration-300"
                               whileHover={{ y: -5, color: '#8B5CF6' }}
                               initial={{ opacity: 0, y: 20 }}
                               whileInView={{ opacity: 1, y: 0 }}
@@ -221,17 +221,17 @@ const Contact = () => {
                   </div>
 
                   <motion.div
-                     className="p-5 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl border border-primary/10 relative overflow-hidden"
+                     className="p-5 bg-gradient-to-r from-[#3B82F6]/5 to-[#10B981]/5 rounded-xl border border-[#3B82F6]/10 relative overflow-hidden"
                      initial={{ opacity: 0, y: 20 }}
                      whileInView={{ opacity: 1, y: 0 }}
                      viewport={{ once: true }}
                      transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 z-0"></div>
+                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#3B82F6]/5 rounded-full -mr-16 -mt-16 z-0"></div>
                      <div className="relative z-10">
-                        <h3 className="text-lg font-semibold text-lighter mb-2">Ready to work together?</h3>
-                        <p className="text-light/70 mb-4">I'm currently available for freelance work or full-time positions.</p>
-                        <div className="inline-flex items-center gap-2 text-primary">
+                        <h3 className="text-lg font-semibold text-[#F8FAFC] mb-2">Ready to work together?</h3>
+                        <p className="text-[#E2E8F0]/70 mb-4">I'm currently available for freelance work or full-time positions.</p>
+                        <div className="inline-flex items-center gap-2 text-[#3B82F6]">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                               <path
                                  strokeLinecap="round"
