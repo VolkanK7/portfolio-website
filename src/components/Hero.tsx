@@ -6,9 +6,9 @@ const Hero = () => {
    return (
       <section id="hero" className="min-h-screen flex items-center pt-20 pb-16 px-6 md:px-12 bg-gradient-to-b from-[#030712] to-[#0F172A]">
          <div className="container mx-auto">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+            <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row">
                <motion.div
-                  className="md:w-1/2 text-center md:text-left"
+                  className="text-center md:w-1/2 md:text-left"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
@@ -23,7 +23,7 @@ const Hero = () => {
                   </motion.span>
 
                   <motion.h1
-                     className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
+                     className="mb-4 text-4xl font-bold sm:text-5xl md:text-6xl"
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}
                      transition={{ delay: 0.3 }}
@@ -51,7 +51,7 @@ const Hero = () => {
                   </motion.p>
 
                   <motion.div
-                     className="flex flex-wrap gap-4 justify-center md:justify-start"
+                     className="flex flex-wrap justify-center gap-4 md:justify-start"
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ delay: 0.6 }}
@@ -77,17 +77,17 @@ const Hero = () => {
                </motion.div>
 
                <motion.div
-                  className="md:w-1/2 flex justify-center"
+                  className="flex justify-center md:w-1/2"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7 }}
                >
                   <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#10B981] p-1">
-                     <div className="absolute inset-1 rounded-full overflow-hidden">
+                     <div className="absolute overflow-hidden rounded-full inset-1">
                         <div className="w-full h-full bg-[#0F172A] flex items-center justify-center text-[#E2E8F0]">
-                           <div className="relative w-full h-full flex items-center justify-center">
+                           <div className="relative flex items-center justify-center w-full h-full">
                               <span className="text-6xl">
-                                 <Image src={profile} alt="Profile" width={240} height={240} className="rounded-full" />
+                                 <Image src={profile} alt="Profile" className="rounded-full" />
                               </span>
                               <motion.div
                                  className="absolute inset-0 border-4 border-transparent rounded-full"
