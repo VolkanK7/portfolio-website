@@ -72,7 +72,7 @@ const About = () => {
                      { label: 'Location', value: 'Antalya, Turkey' },
                      { label: 'Experience', value: '3+ Years' },
                      { label: 'Languages', value: 'EN / TR' },
-                  ].map((stat, index) => (
+                  ].map((stat) => (
                      <motion.div
                         key={stat.label}
                         className="bg-[#030712] p-6 rounded-xl border border-[#3B82F6]/20 flex flex-col items-center justify-center text-center group"

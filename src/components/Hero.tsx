@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import profile from '../../public/profile.jpeg';
+import Image from 'next/image';
 
 const Hero = () => {
    return (
@@ -18,7 +19,7 @@ const Hero = () => {
                      animate={{ opacity: 1 }}
                      transition={{ delay: 0.2 }}
                   >
-                     Hello 👋, I'm Volkan,
+                     Hello 👋, I&apos;m Volkan,
                   </motion.span>
 
                   <motion.h1
@@ -86,7 +87,7 @@ const Hero = () => {
                         <div className="w-full h-full bg-[#0F172A] flex items-center justify-center text-[#E2E8F0]">
                            <div className="relative w-full h-full flex items-center justify-center">
                               <span className="text-6xl">
-                                 <img src={profile.src} alt="profile" />
+                                 <Image src={profile} alt="Profile" width={240} height={240} className="rounded-full" />
                               </span>
                               <motion.div
                                  className="absolute inset-0 border-4 border-transparent rounded-full"

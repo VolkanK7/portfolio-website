@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import pickupp from '../../public/pickupp.png';
 import ottobus from '../../public/ottobus.png';
-import softalya from '../../public/softalya.jpeg';
+import Image from 'next/image';
 
 const projects = [
    {
@@ -105,7 +105,7 @@ const Projects = () => {
                         <div className="absolute inset-0 flex items-center justify-center bg-[#030712]">
                            <div className="flex items-center space-x-4">
                               <span className="text-[#3B82F6] text-opacity-20 text-6xl font-bold">
-                                 <img src={project.image.src} alt="" height={120} width={120} className="rounded-xl" />
+                                 <Image src={project.image} alt={project.title} height={120} width={120} className="rounded-xl" />
                               </span>
                               <div className="h-20 w-1 bg-[#3B82F6]/10 rounded-full"></div>
                               <div className="flex flex-col items-start">
