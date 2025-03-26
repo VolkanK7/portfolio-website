@@ -1,6 +1,23 @@
+import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Contact = () => {
+   const [status, setStatus] = useState('');
+
+   const sendEmail = (e: any) => {
+      e.preventDefault();
+      emailjs
+         .sendForm('service_vppyhy9', 'template_gvyvr4i', e.target, 'bWJHaixZ9oZXc_WrV')
+         .then(() => {
+            setStatus('success');
+            e.target.reset();
+         })
+         .catch(() => {
+            setStatus('error');
+         });
+   };
+
    return (
       <section id="contact" className="py-20 px-6 md:px-12 bg-[#030712]">
          <div className="container mx-auto">
@@ -27,7 +44,14 @@ const Contact = () => {
                >
                   <h3 className="text-xl font-bold text-[#3B82F6] mb-6">Contact Form</h3>
 
-                  <form className="space-y-5">
+                  {status === 'success' && (
+                     <div className="mb-4 p-3 text-green-800 bg-green-200 border border-green-400 rounded-lg">Your message has been sent successfully! ✅</div>
+                  )}
+                  {status === 'error' && (
+                     <div className="mb-4 p-3 text-red-800 bg-red-200 border border-red-400 rounded-lg">Oops! Something went wrong. Please try again. ❌</div>
+                  )}
+
+                  <form className="space-y-5" /* action="https://formspree.io/f/xdkedqnp" method="POST"  */ onSubmit={sendEmail}>
                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
                            <label htmlFor="name" className="block text-sm font-medium text-[#E2E8F0]/80 mb-1">
@@ -36,8 +60,10 @@ const Contact = () => {
                            <input
                               type="text"
                               id="name"
+                              name="name" // **EKLENDİ**
                               className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0]"
                               placeholder="Your name"
+                              required
                            />
                         </div>
 
@@ -48,8 +74,10 @@ const Contact = () => {
                            <input
                               type="email"
                               id="email"
+                              name="email" // **EKLENDİ**
                               className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0]"
                               placeholder="Your email address"
+                              required
                            />
                         </div>
                      </div>
@@ -61,8 +89,10 @@ const Contact = () => {
                         <input
                            type="text"
                            id="subject"
+                           name="subject" // **EKLENDİ**
                            className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0]"
                            placeholder="Subject of your message"
+                           required
                         />
                      </div>
 
@@ -72,9 +102,11 @@ const Contact = () => {
                         </label>
                         <textarea
                            id="message"
+                           name="message" // **EKLENDİ**
                            rows={5}
                            className="w-full px-4 py-3 bg-[#030712] border border-[#3B82F6]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3B82F6]/50 focus:border-transparent text-[#E2E8F0] resize-none"
                            placeholder="Your message..."
+                           required
                         ></textarea>
                      </div>
 
